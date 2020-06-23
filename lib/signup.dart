@@ -2,9 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:kadbyte/RectangularButton.dart';
-import 'package:kadbyte/RoundTextbox.dart';
-import 'package:kadbyte/login_signup_selector.dart';
 
 import 'SignUpDetails.dart';
 
@@ -42,7 +39,6 @@ class SignUp extends StatelessWidget {
                 ),
               ),
               Container(
-                color: Colors.red,
                 alignment: Alignment.bottomCenter,
                 child: SignUpDetails(),
               ),

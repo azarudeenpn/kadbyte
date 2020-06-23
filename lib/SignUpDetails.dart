@@ -11,7 +11,6 @@ class SignUpDetails extends StatelessWidget {
         Scaffold.of(context).appBarMaxHeight;
     return Container(
         height: height,
-        color: Colors.blue,
         width: double.infinity,
         //margin: EdgeInsets.only(bottom: 50),
         child: SingleChildScrollView(
