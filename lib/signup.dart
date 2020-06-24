@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:kadbyte/RectangularButton.dart';
 
 import 'SignUpDetails.dart';
 
@@ -28,7 +29,7 @@ class SignUp extends StatelessWidget {
           resizeToAvoidBottomInset: true,
           body: Builder(builder: (BuildContext context) {
             var height = MediaQuery.of(context).size.height -
-                Scaffold.of(context).appBarMaxHeight;
+                (Scaffold.of(context).appBarMaxHeight);
             return Stack(
               children: <Widget>[
                 Container(
@@ -45,14 +46,20 @@ class SignUp extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: Scaffold.of(context).appBarMaxHeight,
+                    top: Scaffold
+                        .of(context)
+                        .appBarMaxHeight,
                   ),
                   child: Container(
                     height: height,
                     //color: Colors.blue,
-                    alignment: Alignment.bottomCenter,
+                    alignment: Alignment.center,
                     child: SignUpDetails(),
                   ),
+                ),
+                Container(
+                  alignment: Alignment.bottomCenter,
+                  child: RectangularButton(),
                 )
               ],
             );

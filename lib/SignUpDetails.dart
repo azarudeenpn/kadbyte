@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:kadbyte/RoundTextbox.dart';
 
-import 'RectangularButton.dart';
-
 class SignUpDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -19,15 +17,15 @@ class SignUpDetails extends StatelessWidget {
         //child: SingleChildScrollView(
         child: Column(
             mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               Container(
                 width: MediaQuery.of(context).size.width * 0.80,
                 margin: EdgeInsets.only(
                     left: getParentSize().width * 0.04,
                     right: getParentSize().width * 0.04,
-                    bottom: getParentSize().width * 0.20,
-                    top: getParentSize().width * 0.04),
+                    bottom: getParentSize().height * 0.08,
+                    top: getParentSize().height * 0.02),
                 child: Text(
                   "Sign Up",
                   style: TextStyle(
@@ -37,36 +35,49 @@ class SignUpDetails extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: getParentSize().width * 0.12),
-                width: MediaQuery.of(context).size.width * 0.80,
+                margin: EdgeInsets.only(bottom: getParentSize().height * 0.05),
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.80,
                 child: RoundTextBox(
                   name: "Username",
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: getParentSize().width * 0.12),
-                width: MediaQuery.of(context).size.width * 0.80,
+                margin: EdgeInsets.only(bottom: getParentSize().height * 0.05),
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.80,
                 child: RoundTextBox(
                   name: "Phone",
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(bottom: getParentSize().width * 0.12),
-                width: MediaQuery.of(context).size.width * 0.80,
+                margin: EdgeInsets.only(bottom: getParentSize().height * 0.05),
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.80,
                 child: RoundTextBox(
                   name: "Email",
                 ),
               ),
               Container(
-                  margin: EdgeInsets.only(bottom: getParentSize().width * 0.20),
-                  width: MediaQuery.of(context).size.width * 0.80,
+                  margin: EdgeInsets.only(
+                      bottom: getParentSize().height * 0.05),
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width * 0.80,
                   child: RoundTextBox(
                     name: "Password",
                   )),
-              Container(
+              /*Container(
                 alignment: Alignment.bottomCenter,
                 child: RectangularButton(),
-              ),
+              ),*/
             ]),
         //)
       ),
