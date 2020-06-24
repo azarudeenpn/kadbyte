@@ -7,10 +7,12 @@ import 'RectangularButton.dart';
 class SignUpDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height -
-        Scaffold.of(context).appBarMaxHeight;
+    Size getParentSize() {
+      return MediaQuery.of(context).size;
+    }
+
     return SingleChildScrollView(
-          child: Container(
+      child: Container(
         //color: Colors.blue,
         width: double.infinity,
         //margin: EdgeInsets.only(bottom: 50),
@@ -20,56 +22,51 @@ class SignUpDetails extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               Container(
+                width: MediaQuery.of(context).size.width * 0.80,
                 margin: EdgeInsets.only(
-                    left: 35.0, right: 35.0, bottom: 35.0, top: 35.0),
+                    left: getParentSize().width * 0.04,
+                    right: getParentSize().width * 0.04,
+                    bottom: getParentSize().width * 0.20,
+                    top: getParentSize().width * 0.04),
                 child: Text(
                   "Sign Up",
-                  style: TextStyle(color: Colors.white, fontSize: 30),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: getParentSize().width * 0.1),
                   textAlign: TextAlign.center,
                 ),
               ),
-              Flexible(
-                flex: 1,
-                child: Container(
-                  margin: EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
+              Container(
+                margin: EdgeInsets.only(bottom: getParentSize().width * 0.12),
+                width: MediaQuery.of(context).size.width * 0.80,
+                child: RoundTextBox(
+                  name: "Username",
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: getParentSize().width * 0.12),
+                width: MediaQuery.of(context).size.width * 0.80,
+                child: RoundTextBox(
+                  name: "Phone",
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: getParentSize().width * 0.12),
+                width: MediaQuery.of(context).size.width * 0.80,
+                child: RoundTextBox(
+                  name: "Email",
+                ),
+              ),
+              Container(
+                  margin: EdgeInsets.only(bottom: getParentSize().width * 0.20),
+                  width: MediaQuery.of(context).size.width * 0.80,
                   child: RoundTextBox(
-                    name: "Username",
-                  ),
-                ),
+                    name: "Password",
+                  )),
+              Container(
+                alignment: Alignment.bottomCenter,
+                child: RectangularButton(),
               ),
-              Flexible(
-                flex: 1,
-                child: Container(
-                  margin: EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
-                  child: RoundTextBox(
-                    name: "Phone",
-                  ),
-                ),
-              ),
-              Flexible(
-                flex: 1,
-                child: Container(
-                  margin: EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
-                  child: RoundTextBox(
-                    name: "Email",
-                  ),
-                ),
-              ),
-              Flexible(
-                flex: 1,
-                child: Container(
-                    margin:
-                        EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
-                    child: RoundTextBox(
-                      name: "Password",
-                    )),
-              ),
-              Flexible(
-                child: Container(
-                  alignment: Alignment.bottomCenter,
-                  child: RectangularButton(),
-                ),
-              )
             ]),
         //)
       ),
