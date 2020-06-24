@@ -10,22 +10,28 @@ class SignUpDetails extends StatelessWidget {
     var height = MediaQuery.of(context).size.height -
         Scaffold.of(context).appBarMaxHeight;
     return Container(
-        height: height,
+      //color: Colors.blue,
+      height: height,
         width: double.infinity,
-        //margin: EdgeInsets.only(bottom: 50),
-        child: SingleChildScrollView(
+      //margin: EdgeInsets.only(bottom: 50),
+      //child: SingleChildScrollView(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(
+                    left: 35.0, right: 35.0, bottom: 35.0, top: 35.0),
+                child: Text("Sign Up",
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                  textAlign: TextAlign.center,),
+              ),
+              Flexible(
+                flex: 1,
+                child:
                 Container(
-                  margin: EdgeInsets.only(left: 35.0,right: 35.0,bottom: 35.0,top: 35.0),
-                  child: Text("Sign Up",style: TextStyle(color: Colors.white,fontSize: 30),textAlign: TextAlign.center,),
-            ),
-            Flexible(
-              flex: 1,
-              child:
-            Container(
-                        margin: EdgeInsets.only(left: 35.0,right: 35.0,bottom: 35.0),
+                  margin: EdgeInsets.only(
+                      left: 35.0, right: 35.0, bottom: 35.0),
                         child:
               RoundTextBox(
                 name: "Username",
@@ -51,18 +57,21 @@ class SignUpDetails extends StatelessWidget {
               Flexible(
                 flex: 1,
                 child:
-              Container(
-                  margin: EdgeInsets.only(left: 35.0,right: 35.0,bottom: 35.0),
-                  child:
-              RoundTextBox(
-                name: "Password",
-              )),),
-            Flexible(
-                child:
-            Container(
-              child: RectangularButton(),
-            ))
-            ]))
+                Container(
+                    margin: EdgeInsets.only(
+                        left: 35.0, right: 35.0, bottom: 35.0),
+                    child:
+                    RoundTextBox(
+                      name: "Password",
+                    )),),
+              Flexible(
+                child: Container(
+                  alignment: Alignment.bottomCenter,
+                  child: RectangularButton(),
+                ),
+              )
+            ]),
+      //)
     );
   }
 }
