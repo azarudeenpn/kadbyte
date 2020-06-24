@@ -9,12 +9,12 @@ class SignUpDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height -
         Scaffold.of(context).appBarMaxHeight;
-    return Container(
-      //color: Colors.blue,
-      height: height,
+    return SingleChildScrollView(
+          child: Container(
+        //color: Colors.blue,
         width: double.infinity,
-      //margin: EdgeInsets.only(bottom: 50),
-      //child: SingleChildScrollView(
+        //margin: EdgeInsets.only(bottom: 50),
+        //child: SingleChildScrollView(
         child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.end,
@@ -22,48 +22,48 @@ class SignUpDetails extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(
                     left: 35.0, right: 35.0, bottom: 35.0, top: 35.0),
-                child: Text("Sign Up",
+                child: Text(
+                  "Sign Up",
                   style: TextStyle(color: Colors.white, fontSize: 30),
-                  textAlign: TextAlign.center,),
+                  textAlign: TextAlign.center,
+                ),
               ),
               Flexible(
                 flex: 1,
-                child:
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 35.0, right: 35.0, bottom: 35.0),
-                        child:
-              RoundTextBox(
-                name: "Username",
-              ),),),
+                child: Container(
+                  margin: EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
+                  child: RoundTextBox(
+                    name: "Username",
+                  ),
+                ),
+              ),
               Flexible(
                 flex: 1,
-                child:
-              Container(
-                margin: EdgeInsets.only(left: 35.0,right: 35.0,bottom: 35.0),
-                child:
-              RoundTextBox(
-                name: "Phone",
-              ),),),
+                child: Container(
+                  margin: EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
+                  child: RoundTextBox(
+                    name: "Phone",
+                  ),
+                ),
+              ),
               Flexible(
                 flex: 1,
-                child:
-              Container(
-                margin: EdgeInsets.only(left: 35.0,right: 35.0,bottom: 35.0),
-                child:
-              RoundTextBox(
-                name: "Email",
-              ),),),
+                child: Container(
+                  margin: EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
+                  child: RoundTextBox(
+                    name: "Email",
+                  ),
+                ),
+              ),
               Flexible(
                 flex: 1,
-                child:
-                Container(
-                    margin: EdgeInsets.only(
-                        left: 35.0, right: 35.0, bottom: 35.0),
-                    child:
-                    RoundTextBox(
+                child: Container(
+                    margin:
+                        EdgeInsets.only(left: 35.0, right: 35.0, bottom: 35.0),
+                    child: RoundTextBox(
                       name: "Password",
-                    )),),
+                    )),
+              ),
               Flexible(
                 child: Container(
                   alignment: Alignment.bottomCenter,
@@ -71,7 +71,8 @@ class SignUpDetails extends StatelessWidget {
                 ),
               )
             ]),
-      //)
+        //)
+      ),
     );
   }
 }
