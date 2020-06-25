@@ -9,19 +9,22 @@ class SignUpDetails extends StatelessWidget {
       return MediaQuery.of(context).size;
     }
 
-    return SingleChildScrollView(
-      child: Container(
-        //color: Colors.blue,
-        width: double.infinity,
-        //margin: EdgeInsets.only(bottom: 50),
-        //child: SingleChildScrollView(
-        child: Column(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width * 0.80,
-                margin: EdgeInsets.only(
+    return ListView(
+      children: <Widget>[
+        //SingleChildScrollView(
+        //child:
+        Container(
+          //color: Colors.blue,
+          width: double.infinity,
+          //margin: EdgeInsets.only(bottom: 50),
+          //child: SingleChildScrollView(
+          child: Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  width: MediaQuery.of(context).size.width * 0.80,
+                  margin: EdgeInsets.only(
                     left: getParentSize().width * 0.04,
                     right: getParentSize().width * 0.04,
                     bottom: getParentSize().height * 0.08,
@@ -81,6 +84,7 @@ class SignUpDetails extends StatelessWidget {
             ]),
         //)
       ),
-    );
+      //)
+    ],);
   }
 }

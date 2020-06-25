@@ -46,9 +46,8 @@ class SignUp extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                    top: Scaffold
-                        .of(context)
-                        .appBarMaxHeight,
+                    top: Scaffold.of(context).appBarMaxHeight,
+                    bottom: MediaQuery.of(context).size.height * 0.08,
                   ),
                   child: Container(
                     height: height,
